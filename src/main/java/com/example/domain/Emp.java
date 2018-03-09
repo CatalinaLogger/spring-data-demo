@@ -18,6 +18,16 @@ public class Emp {
     private String name;
     @Column(nullable = false)
     private Date brith;
+    private Integer age;
+
+    public Emp() {
+    }
+
+    public Emp(String name, Date brith, Integer age) {
+        this.name = name;
+        this.brith = brith;
+        this.age = age;
+    }
 
     public Integer getId() {
         return id;
@@ -43,12 +53,21 @@ public class Emp {
         this.brith = brith;
     }
 
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
     @Override
     public String toString() {
         return "Emp{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", brith=" + brith +
+                ", age=" + age +
                 '}';
     }
 }
